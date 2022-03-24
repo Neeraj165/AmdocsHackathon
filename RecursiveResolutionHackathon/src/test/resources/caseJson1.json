@@ -1,0 +1,15 @@
+{
+  "id": "1",
+  "status": "open",
+  "caseLevel1": "Trouble Management",
+  "caseLevel2": "All Prod No Svc",
+  "caseLevel3": "CPE No Sync",
+  "caseLevel4": "Dispatched to Premise",
+  "caseLevel5": "OOS",
+  "resolution": [
+    {
+      "action": "",
+      "result": ""
+    }
+  ]
+}

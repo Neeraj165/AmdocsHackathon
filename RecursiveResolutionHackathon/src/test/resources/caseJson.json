@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "All Prod No Svc",
+    "caseLevel3": "CPE No Sync",
+    "caseLevel4": "Dispatched to Premise",
+    "caseLevel5": "OOS",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "All Prod Intermittent",
+    "caseLevel3": "CPE No Sync",
+    "caseLevel4": "Dispatched to Premise",
+    "caseLevel5": "IS",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "TV No Svc",
+    "caseLevel3": "No Pic No Sound",
+    "caseLevel4": "PC CPE",
+    "caseLevel5": "OOS",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "All Prod No Svc",
+    "caseLevel3": "Inside Issue",
+    "caseLevel4": "Dispatched to Premise",
+    "caseLevel5": "OOS",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "Internet Impaired",
+    "caseLevel3": "Wireless Connectivity",
+    "caseLevel4": "Wireless Settings",
+    "caseLevel5": "IS",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "status": "open",
+    "caseLevel1": "Trouble Management",
+    "caseLevel2": "Email",
+    "caseLevel3": "Education",
+    "caseLevel4": "Reset Password",
+    "caseLevel5": "NSA",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "status": "open",
+    "caseLevel1": "Ordering - OMA",
+    "caseLevel2": "Change - Error Correction",
+    "caseLevel3": "Existing Order - Online",
+    "caseLevel4": "Receive Completion",
+    "caseLevel5": "NA",
+    "resolution": [
+      {
+        "action": "",
+        "result": ""
+      }
+    ]
+  }
+  ]
