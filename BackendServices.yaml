@@ -1,0 +1,144 @@
+---
+swagger: "2.0"
+info:
+  description: "This contract describes the APIs exposed by backend   \n"
+  version: "1.0"
+  title: Backend Server APIs
+  contact:
+    name: Amdocs Inc.
+    url: http://www.amdocs.com
+    email: support@amdocs.com
+  license:
+    name: Amdocs Inc.
+    url: http://www.amdocs.com
+basePath: /backendApplication/v1
+schemes:
+- https
+consumes:
+- application/json;charset=utf-8
+produces:
+- application/json;charset=utf-8
+paths:
+  /getCaseList:
+    get:
+      tags:
+      - Case
+      summary: List or find cases
+      description: |
+        This operation to retrieve case
+      operationId: getCaseList
+      parameters:
+      - name: Accept-Language
+        in: header
+        description: |
+          The locale of the client
+        required: false
+        type: string
+      responses:
+        "200":
+          description: |
+            The request to retrieve an aggregate entity is successful.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Case'
+
+  /performAction/{caseId}:
+    get:
+      tags:
+      - Case
+      summary: List or find cases
+      description: |
+        This operation to retrieve case
+      operationId: getResolutionAction
+      parameters:
+      - name: Accept-Language
+        in: header
+        description: |
+          The locale of the client
+        required: false
+        type: string
+      - name: caseId
+        in: path
+        description: |
+          Locale of the client
+        required: true
+        type: string
+      - name: action
+        in: query
+        description: |
+          The flag for deciding to perform restart from scratch (re-instantiate) or continue from where it left-off.
+          The supported values are:
+           - *true:* Restart from scratch (re-instantiate)
+           - *false:* Continue execution from where it left off. Default is false      
+        type: string
+      responses:
+        "200":
+          description: |
+            The request to retrieve an aggregate entity is successful.
+          schema:
+            $ref: '#/definitions/Result'
+definitions:
+  Case:
+    type: object
+    properties:
+      id:
+        type: string
+        description: |
+          Id of the case
+        readOnly: true
+      caseLvl1:
+        type: string
+        description: |
+          Case Level1
+      caseLvl2:
+        type: string
+        description: |
+          Case Level2
+      caseLvl3:
+        type: string
+        description: |
+          Case Level3
+      caseLvl4:
+        type: string
+        description: |
+          Case Level4
+      caseLvl5:
+        type: string
+        description: |
+          Case Level5
+      status:
+        type: string
+        description: |
+          Case Level5
+      resoluion:
+        type: array
+        items:
+          $ref: '#/definitions/Resolution'
+      
+    description: |
+      The object which holds the case details
+  Result:
+    type: object
+    properties:
+      caseStatus:
+        type: string
+        description: |
+          Case Status
+      resoluion:
+        type: array
+        items:
+          $ref: '#/definitions/Resolution'
+  Resolution:
+    type: object
+    properties:
+      action:
+        type: string
+        description: |
+          Action applied
+      result:
+        type: string
+        description: |
+          Output of the action
+    description: |
+      The object which holds resolution action and result
