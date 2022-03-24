@@ -1,0 +1,132 @@
+---
+swagger: "2.0"
+info:
+  description: "This contract describes the APIs exposed by prediction engine   \n"
+  version: "1.0"
+  title: Prediction Engine APIs
+  contact:
+    name: Amdocs Inc.
+    url: http://www.amdocs.com
+    email: support@amdocs.com
+  license:
+    name: Amdocs Inc.
+    url: http://www.amdocs.com
+basePath: /predictionEngine/v1
+schemes:
+- https
+consumes:
+- application/json;charset=utf-8
+produces:
+- application/json;charset=utf-8
+paths:
+  /getResolutionAction:
+    post:
+      tags:
+      - Recommendation
+      summary: Recommendation Actions
+      consumes:
+      - application/json;charset=utf-8
+      produces:
+      - application/json;charset=utf-8
+      description: |
+        This service predicts the recommended action
+      operationId: getPossibleAction
+      parameters:
+      - name: Accept-Language
+        in: header
+        description: |
+          Locale of the client
+        required: false
+        type: string
+      - in: body
+        name: MassOperation
+        description: |
+          Mass operation information
+        required: true
+        schema:
+          $ref: '#/definitions/CaseDetials'
+      responses:
+        "200":
+          description: |
+            The request to retrieve an aggregate entity is successful.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Resolution'
+definitions:
+  CaseDetials:
+    type: object
+    properties:
+      id:
+        type: string
+        description: |
+          Id of the case]
+        readOnly: true
+      caseLvl1:
+        type: string
+        description: |
+          Case Level1
+      caseLvl2:
+        type: string
+        description: |
+          Case Level2
+      caseLvl3:
+        type: string
+        description: |
+          Case Level3
+      caseLvl4:
+        type: string
+        description: |
+          Case Level4
+      caseLvl5:
+        type: string
+        description: |
+          Case Level5
+      resolutionAction1:
+        type: string
+        description: |
+          Case Level1
+      resolutionAction1Result:
+        type: string
+        description: |
+          Case Level2
+      resolutionAction2:
+        type: string
+        description: |
+          Case Level3
+      resolutionAction2Result:
+        type: string
+        description: |
+          Case Level4
+      resolutionAction3:
+        type: string
+        description: |
+          Case Level1
+      resolutionAction3Result:
+        type: string
+        description: |
+          Case Level2
+      resolutionAction4:
+        type: string
+        description: |
+          Case Level3
+      resolutionAction4Result:
+        type: string
+        description: |
+          Case Level4
+
+    description: |
+      The object which holds the case details
+  Resolution:
+    type: object
+    properties:
+      action:
+        type: string
+        description: |
+          Action applied
+      result:
+        type: string
+        description: |
+          Output of the action
+    description: |
+      The object which holds resolution action and result
